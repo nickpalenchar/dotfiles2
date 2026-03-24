@@ -2,8 +2,6 @@ from talon import Context
 
 ctx = Context()
 
-# Post-transcription find and replace
-# These are case-insensitive and fire after Conformer transcribes
 ctx.lists["user.vocabulary"] = {
     "web hook": "webhook",
     "web hooks": "webhooks",
