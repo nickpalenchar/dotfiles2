@@ -1,0 +1,4 @@
+.talon/*
+!.talon/user/
+.talon/user/*
+!.talon/user/nick/

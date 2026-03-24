@@ -1,0 +1,23 @@
+- defaults:
+    link:
+      relink: true
+      backup: true
+
+- clean: ['~']
+
+- link:
+    ~/.zshrc: .zshrc
+    ~/.vimrc: .vimrc
+    ~/.talon/user/nick:
+      glob: true
+      path: talon-nick/*
+      prefix: .
+
+
+- create:
+    - ~/.vim/undo-history
+    - ~/.talon/user/nick
+
+- shell:
+  - [git submodule update --init --recursive, Installing submodules]
+  - [test -d ~/.talon/user/community || git clone git@github.com:talonhub/community.git ~/.talon/user/community]
