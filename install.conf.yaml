@@ -8,10 +8,7 @@
 - link:
     ~/.zshrc: .zshrc
     ~/.vimrc: .vimrc
-    ~/.talon/user/nick:
-      glob: true
-      path: talon-nick/*
-      prefix: .
+    ~/.talon/user/nick: talon-nick
 
 
 - create:
@@ -21,3 +18,4 @@
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
   - [test -d ~/.talon/user/community || git clone git@github.com:talonhub/community.git ~/.talon/user/community]
+  - [test -d ~/.talon/user/talon_hud || git clone https://github.com/chaosparrot/talon_hud ~/.talon/user/talon_hud]
